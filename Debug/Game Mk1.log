@@ -1,0 +1,56 @@
+﻿  Main.cpp
+C:\SFML\Game Mk1\Projectile.h(23,1): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\SFML\Game Mk1\Projectile.h(32,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\SFML\Game Mk1\Projectile.h(37,63): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\SFML\Game Mk1\Player.h(41,41): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\SFML\Game Mk1\Player.h(42,41): warning C4244: '=': conversion from 'const T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\SFML\Game Mk1\Player.h(45,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\SFML\Game Mk1\Player.h(51,25): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(33,57): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\SFML\Game Mk1\Monster.h(34,55): warning C4244: '=': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+C:\SFML\Game Mk1\Monster.h(36,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\SFML\Game Mk1\Monster.h(41,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(44,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(47,43): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(47,23): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(50,45): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(50,30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(57,62): warning C4244: 'return': conversion from 'double' to 'int', possible loss of data
+C:\SFML\Game Mk1\Monster.h(66,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\SFML\Game Mk1\Monster.h(67,36): warning C4244: '=': conversion from 'T' to 'int', possible loss of data
+          with
+          [
+              T=float
+          ]
+C:\SFML\Game Mk1\Monster.h(68,28): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(76,26): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(97,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\Monster.h(124,29): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(32,18): warning C4244: '=': conversion from 'clock_t' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(43,127): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(56,215): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(56,129): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(80,206): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(80,120): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\SFML\Game Mk1\World.h(91,18): warning C4244: '=': conversion from 'clock_t' to 'float', possible loss of data
+  Game Mk1.vcxproj -> C:\SFML\Game Mk1\Debug\Game Mk1.exe
