@@ -5,6 +5,8 @@
 #include <iostream>
 #include <string>
 #include <cmath>
+#include "Defines.h"
+
 #include "Projectile.h"
 
 
@@ -14,12 +16,10 @@ private:
 	sf::Texture texture;
 	sf::Sprite sprite;
 	sf::Vector2f moveDirection;
-	Projectile** projectiles;
 	float velocity = 2;
 public:
-	Player(int windowSizeX, int windowSizeY, Projectile** projectiles) 
+	Player(int windowSizeX, int windowSizeY) 
 	{
-		this->projectiles = projectiles;
 		sprite.setScale(SPRITE_SCALE_PLAYER, SPRITE_SCALE_PLAYER);
 		if (texture.loadFromFile("pudzian.png")) 
 		{
@@ -33,6 +33,7 @@ public:
 
 	sf::Sprite* getSprite() { return &sprite; }
 	sf::Vector2f getPosition() { return sprite.getPosition(); }
+	sf::Vector2f getDirection() { return moveDirection; }
 
 	void move(int mousePositionX, int mousePositionY) 
 	{
@@ -49,18 +50,5 @@ public:
 			sprite.move(moveDirection * velocity);
 			sprite.setRotation(90+atan2(displacementY, displacementX)*180/3.141592);
 		}
-	}
-
-	void shoot()
-	{
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-			for (int i = 0; i < MAX_PROJECTILES; i++)
-			{
-				if (projectiles[i] == NULL)
-				{
-					projectiles[i] = new Projectile(sprite.getPosition().x, sprite.getPosition().y, moveDirection);
-					break;
-				}
-			}
 	}
 };

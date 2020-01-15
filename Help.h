@@ -18,11 +18,8 @@ public:
 		window.draw(help);
 	}
 
-
 private:
-
 	sf::Font font;
 	sf::Text help;
-
 };
 

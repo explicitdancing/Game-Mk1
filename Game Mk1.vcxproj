@@ -134,11 +134,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Defines.h" />
+    <ClInclude Include="Interface.h" />
     <ClInclude Include="Help.h" />
     <ClInclude Include="Menu.h" />
     <ClInclude Include="Monster.h" />
-    <ClInclude Include="MonsterDumb.h" />
-    <ClInclude Include="MonsterFollow.h" />
     <ClInclude Include="Projectile.h" />
     <ClInclude Include="World.h" />
     <ClInclude Include="Player.h" />

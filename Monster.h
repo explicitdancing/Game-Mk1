@@ -6,6 +6,8 @@
 #include <string>
 #include <cmath>
 #include <ctime>
+#include "Defines.h"
+
 #include "Player.h"
 
 class Monster 
@@ -48,7 +50,6 @@ public:
 			sprite.setPosition(rand() % windowSizeX, windowSizeY);
 			break;
 		}
-		sprite.setPosition((rand() % windowSizeX) + (sprite.getLocalBounds().width / 2), (rand() % windowSizeY) + (sprite.getLocalBounds().height));
 	}
 
 	float getVelocity() { return velocity; }
@@ -73,10 +74,6 @@ public:
 			currentDirection.y = ((500 * currentDirection.y + targetDirection.y) / 501);
 			sprite.move(currentDirection * velocity);
 			sprite.setRotation(90 + atan2(currentDirection.y, currentDirection.x) * 180 / 3.141592);
-		}
-		if (velocity < 0.5) 
-		{
-			velocity = velocity + 0.0001;
 		}
 	}
 
@@ -108,16 +105,8 @@ public:
 		}
 	}
 
-	void destroy(Monster* monsters[])
+	void destroy()
 	{
-		for (int i = 0; i < MAX_MONSTERS; i++)
-		{
-			if (monsters[i] == this)
-			{
-				monsters[i] = NULL;
-				break;
-			}
-		}
 		this->~Monster();
 	}
 
@@ -136,7 +125,7 @@ public:
 				distanceFromCentres = sqrt(pow((x1 - x2), 2) + pow((y1 - y2), 2));
 				if (distanceFromCentres <= radiusSum)
 				{
-					this->destroy(monsters);
+					this->destroy();
 					break;
 				}
 			}

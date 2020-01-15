@@ -12,6 +12,7 @@
 #include "Projectile.h"
 #include "Player.h"
 #include "World.h"
+#include "Interface.h"
 
 int main()
 {
@@ -23,6 +24,7 @@ int main()
 	Help help(WINDOW_SIZE_X, WINDOW_SIZE_Y);
 	bool menuFlag = 1;
 	bool helpFlag = 0;
+	bool gameFlag = 0;
 	while (window.isOpen())
 	{
 		if (menuFlag)
@@ -55,11 +57,13 @@ int main()
 							case 0:
 								//resume
 								menuFlag = 0;
+								gameFlag = 1;
 								break;
 
 							case 1:
 								//new game
 								menuFlag = 0;
+								gameFlag = 1;
 								world.newGame();
 								break;
 
@@ -95,7 +99,7 @@ int main()
 
 			window.display();
 		}
-		else
+		else if(gameFlag)
 		{
 			while (window.pollEvent(event))
 			{
@@ -106,6 +110,10 @@ int main()
 					mousePositionX = event.mouseMove.x;
 					mousePositionY = event.mouseMove.y;
 				}
+				if (event.type == sf::Event::MouseButtonPressed)
+				{
+					world.shoot();
+				}
 			}
 
 			window.clear();
@@ -115,10 +123,12 @@ int main()
 
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape))
 			{
+				gameFlag = 0;
 				menuFlag = 1;
 			}
 			if (sf::Keyboard::isKeyPressed(sf::Keyboard::F1))
 			{
+				gameFlag = 0;
 				menuFlag = 1;
 				helpFlag = 1;
 			}
